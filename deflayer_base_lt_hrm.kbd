@@ -2,7 +2,7 @@
 
 (deflayer base
   q    w    e    r    t    y    u    i    o    p
-  @aa  @ss  @dd  @ff  g    h    @jj  @kk  @ll  ;
+  @aa  @ss  @dd  @ff  g    h    @jj  @kk  @ll  @éé
   z    x    c    v    b    n    m    ,    .    /
             @lalt          @nav            @ralt
 )
@@ -28,6 +28,7 @@
   jj (tap-hold $tto $hto j rsft)
   kk (tap-hold $tto $hto k lalt)
   ll (tap-hold $tto $hto l rmet)
+  éé (tap-hold $tto $hto ; rctl)
 )
 
 ;; vim: set ft=lisp
