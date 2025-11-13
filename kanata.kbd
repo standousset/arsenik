@@ -54,7 +54,7 @@
   tab  home up   end  pgup  @-  7   8   9   @/
   caps lft  down rght pgdn  @:  4   5   6   0
   XX voldwn mute volu S-tab @.  1   2   3   @,
-            del               _            esc
+            del       _            esc
 )
 
 ;; vim: set ft=lisp

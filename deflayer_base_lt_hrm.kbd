@@ -1,10 +1,10 @@
-;; Base layer: layer-taps under the thumbs + home-row mods on SDF and JKL
+;;Base layer: layer-taps under the thumbs + home-row mods on SDF and JKL
 
 (deflayer base
   q    w    e    r    t    y    u    i    o    p
   @aa  @ss  @dd  @ff  g    h    @jj  @kk  @ll  @éé
   z    x    c    v    b    n    m    ,    .    /
-            @lalt          @nav            @ralt
+            @lft_spc          @nav           @rgt_spc
 )
 
 (defalias
@@ -16,8 +16,8 @@
   ;;  - acts as a modifier by default, or as BS/Ret when tapped separately;
   ;;  - works great with Qwerty-Lafayette and Ergo-L keyboard layouts, where
   ;;    neither Shift nor AltGr are used outside of the 3×10 main alpha keys.
-  lalt (tap-hold-press $tto $hto bspc ralt)
-  ralt (tap-hold-press $tto $hto ret ralt)
+  lft_spc (tap-hold $tto $hto bspc ralt)
+  rgt_spc (tap-hold $tto $hto ret ret)
 
   ;; Home-row mods
   ;; Must be hold long enough (300ms) to become a modifier.
