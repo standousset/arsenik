@@ -26,7 +26,7 @@
 
 ;; Because macOS cannot differentiate between leftAlt, rightAlt and AltGr properly
 ;; and because anyAlt will be used for windows navigation
-;; AltGr was mapped on the caps modifier
+;; AltGr was mapped on the control modifier, which is a relatively big sacrifice but mapping on caps was not ergonomically pleasant
 ;;
 ;; https://developer.apple.com/library/archive/technotes/tn2056/_index.html#//apple_ref/doc/uid/DTS10003085-CH1-SUBSECTION9
 ;; 
@@ -40,13 +40,13 @@
 ;;    <modifier keys="anyShift" />
 ;;  </keyMapSelect>
 ;;  <keyMapSelect mapIndex="2"> <!-- caps -->
-;;    <modifier keys="anyShift anyOption  command" />
-;;  </keyMapSelect>
-;;  <keyMapSelect mapIndex="3"> <!-- option -->
 ;;    <modifier keys="caps" />
 ;;  </keyMapSelect>
+;;  <keyMapSelect mapIndex="3"> <!-- option -->
+;;    <modifier keys="control" />
+;;  </keyMapSelect>
 ;;  <keyMapSelect mapIndex="4"> <!-- option + shift -->
-;;    <modifier keys="anyShift caps anyOption? command?" />
+;;    <modifier keys="anyShift control" />
 ;;  </keyMapSelect>
 ;; </modifierMap>
 ;;
@@ -62,8 +62,8 @@
   ;;  - acts as a modifier by default, or as BS/Ret when tapped separately;
   ;;  - works great with Qwerty-Lafayette and Ergo-L keyboard layouts, where
   ;;    neither Shift nor AltGr are used outside of the 3×10 main alpha keys.
-  lft_spc (tap-hold $tto $hto bspc lmet)
-  rgt_spc (tap-hold $tto $hto ret caps)
+  lft_spc (tap-hold $tto $hto bspc lctl)
+  rgt_spc (tap-hold $tto $hto ret rctl)
 
   ;; Home-row mods
   ;; Must be hold long enough (300ms) to become a modifier.
@@ -75,10 +75,6 @@
   kk (tap-hold $tto $hto k rmet)
   ll (tap-hold $tto $hto l lalt)
   éé (tap-hold $tto $hto ; rctl)
-  mwu (mwheel-up 50 40)
-  mwd (mwheel-down 50 120)
-  mwl (mwheel-left 50 120)
-  mwr (mwheel-right 50 120)
 )
   
 (defalias
